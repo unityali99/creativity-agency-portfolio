@@ -1,0 +1,45 @@
+@import "variables";
+@import "mixins";
+
+.header
+{
+    grid-area: "header";
+    background-color: $blue-lighter;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: max-content 1fr;
+    justify-items: center;
+    align-items: center;
+    @include medium
+    {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+    }
+    &--title
+    {
+        padding: 2rem;
+        font-size: 40pt;
+        &__play
+        {
+            cursor: pointer;
+            font-size: 15pt;
+            font-weight: lighter;
+            padding-top: 5rem;
+            &--img
+            {
+                width: 10%;
+            }
+        }
+    }
+
+    &--img
+    {
+        justify-self: flex-end;
+        @include medium
+        {
+            justify-self: center;
+        }
+        width: 70vw;
+        padding: 2rem;
+    }
+}

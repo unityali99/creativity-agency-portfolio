@@ -1,0 +1,24 @@
+.footer
+{
+    grid-area: footer;
+    background-color: $blue-dark;
+    text-align: center;
+    font-family: sans-serif;
+    &__nav
+    {
+        padding: 10rem;
+        &--link
+        {
+            text-transform: capitalize;
+            text-decoration: none;
+            color: rgba(white, .9);
+            font-size: 17pt;
+            margin-right: 10rem;
+            @include tablet-land 
+            {
+                display: block;
+                margin: 5rem 0;
+            }
+        }
+    }
+}

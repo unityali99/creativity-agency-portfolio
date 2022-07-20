@@ -1,0 +1,31 @@
+@mixin medium 
+{
+    @media only screen and (max-width: 768px) 
+    {
+        @content;
+    }    
+}
+
+@mixin tablet-land 
+{
+    @media only screen and (max-width: 992px) 
+    {
+        @content;
+    }
+} 
+
+@mixin large 
+{
+    @media only screen and (max-width: 1500px) 
+    {
+        @content;
+    }    
+}
+
+@mixin ultra-large 
+{
+    @media only screen and (min-width: 1500px) 
+    {
+        @content;
+    }    
+}
